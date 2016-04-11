@@ -41,7 +41,7 @@ public class OneApmPlugin extends CordovaPlugin {
     private boolean largThan40() {
         try {
             String nowVersion = CordovaWebView.CORDOVA_VERSION;
-            String fistLetter[] = nowVersion.split(".");
+            String fistLetter[] = nowVersion.split("\\.");
             if(fistLetter !=null && fistLetter.length>=2) {
                 String mainVersion  = fistLetter[0];
                 int version = Integer.parseInt(mainVersion);
@@ -55,12 +55,12 @@ public class OneApmPlugin extends CordovaPlugin {
         return false;
     }
 
-    //onPageFinished ,onNavigationAttempt(shouldOverrideUrlLoading).
+    //onPageStarted onReceiveError onPageFinished ,onNavigationAttempt(shouldOverrideUrlLoading).
     public Object onMessage(String var1, Object var2) {
-       if("onPageFinished".equals(var1) && this.largThan40) {
-           //inject js file .
-           oneapmWebViewClientApi.onPageFinished(this.context);
-       }
+        if("onPageFinished".equals(var1) && this.largThan40) {
+            //inject js file .
+            oneapmWebViewClientApi.onPageFinished(this.context);
+        }
         return null;
     }
 

@@ -31,11 +31,11 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="OneAPM" >
-                <param name="android-package" value="com.blueware.agent.android.util.webview.OneApmPlugin"/>
+                <param name="android-package" value="org.apache.cordova.oneapm.webview.OneApmPlugin"/>
             </feature>
         </config-file>
 
-        <source-file src="src/android/com/blueware/agent/android/util/webview/OneApmPlugin.java" target-dir="src/org.apache.cordova/oneapm/webview" />
+        <source-file src="src/android/org/apache/cordova/oneapm/webview/OneApmPlugin.java" target-dir="src/org/apache/cordova/oneapm/webview" />
         <source-file src="libs/android/oneapm-android-agent.jar" target-dir="libs" />
     </platform>
 

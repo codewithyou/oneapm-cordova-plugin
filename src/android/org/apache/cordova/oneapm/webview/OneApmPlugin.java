@@ -1,4 +1,4 @@
-package com.blueware.agent.android.util.webview;
+package org.apache.cordova.oneapm.webview;
 
 import android.content.Context;
 import android.text.TextUtils;

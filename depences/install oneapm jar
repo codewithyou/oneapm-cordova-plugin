@@ -1,0 +1,2 @@
+mvn install:install-file -DgroupId=com.oneapm.android  -DartifactId=agent -Dversion=2.0.8  -Dpackaging=jar -Dfile=F:\study\cordova\plugin\github\cordova-crashlytics-plugin-master\libs\android\blueware-android-agent.jar
+

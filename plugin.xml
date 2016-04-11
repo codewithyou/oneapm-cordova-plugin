@@ -36,7 +36,7 @@
         </config-file>
 
         <source-file src="src/android/com/blueware/agent/android/util/webview/OneApmPlugin.java" target-dir="src/com/blueware/agent/android/util/webview" />
-        <source-file src="libs/android/oneapm-android-agent-cordova.jar" target-dir="libs" />
+        <source-file src="libs/android/oneapm-android-agent.jar" target-dir="libs" />
     </platform>
 
 </plugin>

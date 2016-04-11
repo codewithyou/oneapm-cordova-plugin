@@ -56,15 +56,18 @@ public class OneApmPlugin extends CordovaPlugin {
     }
 
     //onPageStarted onReceiveError onPageFinished ,onNavigationAttempt(shouldOverrideUrlLoading).
+    @Override
     public Object onMessage(String var1, Object var2) {
         if("onPageFinished".equals(var1) && this.largThan40) {
             //inject js file .
             oneapmWebViewClientApi.onPageFinished(this.context);
         }
+
         return null;
     }
 
     //onOverrideUrlLoading(shouldOverrideUrlLoading)
+    @Override
     public boolean onOverrideUrlLoading(String var1) {
         if(TextUtils.isEmpty(var1)) {
             return false;

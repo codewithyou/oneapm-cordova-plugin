@@ -85,4 +85,10 @@ public class OneApmPlugin extends CordovaPlugin {
         //used some time else .
         return false;
     }
+
+    public void onDestroy() {
+        if(this.oneapmWebViewClientApi !=null ){
+            this.oneapmWebViewClientApi.onDestroy();
+        }
+    }
 }

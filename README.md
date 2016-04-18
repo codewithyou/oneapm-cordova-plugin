@@ -2,5 +2,5 @@
 OneAPM Android Cordova Plugin,Simple implement,Will change some time later !
 
 
-#命令行执行如下命令：
+#鍛戒护琛屾墽琛屽涓嬪懡浠わ細
 cordova plugin add   https://github.com/codewithyou/oneapm-cordova-plugin.git

@@ -60,6 +60,7 @@ public class OneApmPlugin extends CordovaPlugin {
     public Object onMessage(String var1, Object var2) {
         if("onPageFinished".equals(var1) && this.largThan40) {
             //inject js file .
+
             oneapmWebViewClientApi.onPageFinished(this.context);
         }
 
@@ -73,7 +74,9 @@ public class OneApmPlugin extends CordovaPlugin {
             return false;
         }
         if(this.largThan40 && var1.startsWith("oneapm")) {
-            this.oneapmWebViewClientApi.shouldOverrideUrlLoading(var1);
+            if(this.oneapmWebViewClientApi.shouldOverrideUrlLoading(var1)){
+                return true;
+            }
         }
         return false;
     }
